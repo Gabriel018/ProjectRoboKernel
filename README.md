@@ -2,5 +2,5 @@
 # RoboKernel
 
 
-![Logo](https://user-images.githubusercontent.com/42377719/59080490-594f2180-88bf-11e9-8f6c-d9d8ffff8404.png)
+![Logo (1)](https://user-images.githubusercontent.com/42377719/59448504-a3fafd00-8ddb-11e9-9084-9d549bf43d24.png)
 
