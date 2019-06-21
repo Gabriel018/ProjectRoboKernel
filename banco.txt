@@ -1,0 +1,49 @@
+1 - Listar nome, sobrenome e salario ordenado por sobrenome
+
+SELECT nome, sobrenome, salario FROM funcionario
+order by sobrenome
+
+
+2 - Listar todos os campos de funcionários ordenados por salário em ordem decrescente
+
+SELECT * FROM funcionario
+ORDER BY salario DESC
+
+
+3 - Listar os funcionários que têm salário inferior a R$ 8.000,00 ordenados pelo nome completo
+
+SELECT * FROM funcionario
+WHERE SALARIO < 8000.00
+ORDER BY nome, sobrenome
+
+4 - Listar o salário médio pago pela empresa
+
+SELECT AVG(SALARIO) AS MEDIA FROM FUNCIONARIO
+
+
+5 - Listar o total da folha de pagamento, com a respectiva coluna com o nome TotalPagamento
+
+SELECT  sum(salario) as TotalPagamento FROM funcionario
+
+
+6 - Listar o nome, o nome do departamento e o salário de todos os funcionários - usar a cláusula  INNER JOIN
+
+SELECT  F.NOME, F.SOBRENOME, D.NOME, F.SALARIO
+FROM FUNCIONARIO AS F INNER JOIN DEPARTAMENTO AS D
+ON F.CODDEPTO = D.CODIGO
+
+
+7 - Listar o nome de cada departamento e o respectivo valor da folha de pagamento ordenados por nome do departamento (descendente). A coluna relativa ao valor do pagamento deve ter o nome total
+
+SELECT  D.NOME, SUM(F.SALARIO) AS TOTAL
+FROM DEPARTAMENTO AS D INNER JOIN FUNCIONARIO AS F
+ON F.CODDEPTO = D.CODIGO
+GROUP BY D.NOME
+ORDER BY D.NOME DESC
+
+    
+8 - Listar os nomes dos funcionários que trabalham no departamento de PROJETOS.
+
+SELECT NOME FROM FUNCIONARIO
+WHERE  CODDEPTO = (SELECT CODIGO FROM DEPARTAMENTO
+                   WHERE NOME = "PROJETOS")
