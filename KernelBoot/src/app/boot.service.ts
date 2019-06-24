@@ -8,7 +8,7 @@ import { HttpClientModule } from "@angular/common/http";
 export class BootService {
 
   private baseURL: string = "https://api.dialogflow.com/v1/query?v=20150910";
-  private token: string = 'aae58bef808241238ac9b4a0eac61bbf'
+  private token: string = 'TOKEN'
 
   constructor(private http: HttpClient) { }
 
