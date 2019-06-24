@@ -1,4 +1,4 @@
-# ChatBot com DialogFlow
+# RoboKernel
 
 
 ### Projeto desenvolvido em Angular 7 com DialogFlow 
@@ -8,10 +8,7 @@
 
 
 
-#### Tutorial 
-[Parte 1]( https://medium.com/@kheronn.machado/aplicacao-angular7-dados-abertos-part1-ba6b87573f86 )
 
-[Parte 2]( https://medium.com/@kheronn.machado/chatbot-angular7-dialogflow-part1-16abd26cce62)
 
 
 
