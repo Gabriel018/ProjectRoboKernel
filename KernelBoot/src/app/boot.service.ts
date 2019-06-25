@@ -15,7 +15,7 @@ export class BootService {
   public getResponse(query: string) {
     let data = {
       query: query,
-      lang: 'en',
+      lang: 'pt-BR',
       sessionId: '12345'
     }
     return this.http
