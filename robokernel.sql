@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 25-Jun-2019 às 15:10
+-- Generation Time: 25-Jun-2019 às 16:57
 -- Versão do servidor: 10.1.9-MariaDB
 -- PHP Version: 5.6.15
 
@@ -19,6 +19,28 @@ SET time_zone = "+00:00";
 --
 -- Database: `robokernel`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `acesso_restrito`
+--
+
+CREATE TABLE `acesso_restrito` (
+  `pk_restrito` int(11) NOT NULL,
+  `nome` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `telefone` varchar(255) NOT NULL,
+  `login` varchar(255) NOT NULL,
+  `senha` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Extraindo dados da tabela `acesso_restrito`
+--
+
+INSERT INTO `acesso_restrito` (`pk_restrito`, `nome`, `email`, `telefone`, `login`, `senha`) VALUES
+(1, 'admin', 'admin@gmail.com', '2199997070', 'admin', '123');
 
 -- --------------------------------------------------------
 
@@ -79,6 +101,14 @@ CREATE TABLE `cliente` (
   `foto` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Extraindo dados da tabela `cliente`
+--
+
+INSERT INTO `cliente` (`codcliente`, `nome`, `email`, `senha`, `celular`, `cpf`, `cep`, `endereco`, `numero`, `complemento`, `bairro`, `cidade`, `estado`, `foto`) VALUES
+(1, 'Ana', 'ana@gmail.com', '123', '44343', '3331', '3131', 'gfgfgf', '12', 'ggfd', 'ffdfd', 'fdfd', 'fdfd', 'df'),
+(2, 'Ana', 'ana@gmail.com', '123', '44343', '3331', '3131', 'gfgfgf', '12', 'ggfd', 'ffdfd', 'fdfd', 'fdfd', 'df');
+
 -- --------------------------------------------------------
 
 --
@@ -127,6 +157,51 @@ CREATE TABLE `perfilcliente` (
 -- --------------------------------------------------------
 
 --
+-- Estrutura da tabela `produto`
+--
+
+CREATE TABLE `produto` (
+  `codproduto` int(11) NOT NULL,
+  `descricao` varchar(150) NOT NULL,
+  `categoria` varchar(100) NOT NULL,
+  `manual` varchar(300) NOT NULL,
+  `preco` varchar(12) NOT NULL,
+  `imagem` varchar(200) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Extraindo dados da tabela `produto`
+--
+
+INSERT INTO `produto` (`codproduto`, `descricao`, `categoria`, `manual`, `preco`, `imagem`) VALUES
+(1, 'Kit para Arduino', 'Kits Didáticos', '00', '59.00', 'kitarduino.png'),
+(2, 'Kit Iniciante V8 para Arduino', 'Kits Didï¿½ticos', '00', '199.00', '619217.png'),
+(3, 'Kit Avanï¿½ado V4 para Arduino', 'Kits Didï¿½ticos', '00', '250.00', '736318.png'),
+(4, 'Master Kit: Kit Iniciante V8 + Kit Avançado V4', 'Kits Didáticos', '00', '389.00', '1034_1_H.png'),
+(5, 'Kit Iniciante para Robótica', 'Kits Didáticos', '00', '349.00', '854_1_H.png'),
+(6, 'Arduino Shield - Ethernet W5500', 'Shields para Arduino', '00', '119.00', '1004_1_H.png'),
+(7, 'Arduino Shield - Padawan', 'Shields para Arduino', '00', '49.00', '669_1_H.png'),
+(8, 'Arduino Shield - Albatross Master', 'Shields para Arduino', '00', '69.00', '482_1_H.png'),
+(9, 'Arduino Shield - CNC V3', 'Shields para Arduino', '00', '29.00', '904_1_H.png'),
+(10, 'Arduino Shield - Joystick', 'Shields para Arduino', '00', '49.00', '545_1_H.png'),
+(11, 'Placa Nano V3 + Cabo USB para Arduino', 'Placas Arduino', '00', '39.00', '1048_1_H.png'),
+(12, 'Placa RC FTDI V1.1', 'Placas Arduino', '00', '35.00', '516_1_H.png'),
+(13, 'Kit para Arduino', 'Kits Didáticos', '00', '59.00', 'kitarduino.png'),
+(14, 'Kit Iniciante V8 para Arduino', 'Kits Didï¿½ticos', '00', '199.00', '763573.png'),
+(15, 'Kit Avanï¿½ado V4 para Arduino', 'Kits Didï¿½ticos', '00', '250.00', '303340.png'),
+(16, 'Master Kit: Kit Iniciante V8 + Kit Avançado V4', 'Kits Didáticos', '00', '389.00', '1034_1_H.png'),
+(17, 'Kit Iniciante para Robótica', 'Kits Didáticos', '00', '349.00', '854_1_H.png'),
+(18, 'Arduino Shield - Ethernet W5500', 'Shields para Arduino', '00', '119.00', '1004_1_H.png'),
+(19, 'Arduino Shield - Padawan', 'Shields para Arduino', '00', '49.00', '669_1_H.png'),
+(20, 'Arduino Shield - Albatross Master', 'Shields para Arduino', '00', '69.00', '482_1_H.png'),
+(21, 'Arduino Shield - CNC V3', 'Shields para Arduino', '00', '29.00', '904_1_H.png'),
+(22, 'Arduino Shield - Joystick', 'Shields para Arduino', '00', '49.00', '545_1_H.png'),
+(23, 'Placa Nano V3 + Cabo USB para Arduino', 'Placas Arduino', '00', '39.00', '1048_1_H.png'),
+(24, 'Placa RC FTDI V1.1', 'Placas Arduino', '00', '35.00', '516_1_H.png');
+
+-- --------------------------------------------------------
+
+--
 -- Estrutura da tabela `produtos`
 --
 
@@ -135,18 +210,18 @@ CREATE TABLE `produtos` (
   `descricao` varchar(150) NOT NULL,
   `categoria` varchar(100) NOT NULL,
   `manual` varchar(300) NOT NULL,
-  `valor` varchar(12) NOT NULL,
-  `foto` varchar(200) NOT NULL
+  `preco` varchar(12) NOT NULL,
+  `imagem` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Extraindo dados da tabela `produtos`
 --
 
-INSERT INTO `produtos` (`codproduto`, `descricao`, `categoria`, `manual`, `valor`, `foto`) VALUES
+INSERT INTO `produtos` (`codproduto`, `descricao`, `categoria`, `manual`, `preco`, `imagem`) VALUES
 (1, 'Kit para Arduino', 'Kits Didáticos', '00', '59.00', 'kitarduino.png'),
-(2, 'Kit Iniciante V8 para Arduino', 'Kits Didáticos', '00', '199.00', '1011_1_X.png'),
-(3, 'Kit Avançado V4 para Arduino', 'Kits Didáticos', '00', '250.00', '1010_1_X.png'),
+(2, 'Kit Iniciante V8 para Arduino', 'Kits Didáticos', '00', '199.00', 'alicate.png'),
+(3, 'Kit Avançado V4 para Arduino', 'Kits Didáticos', '00', '250.00', 'alicate.png'),
 (4, 'Master Kit: Kit Iniciante V8 + Kit Avançado V4', 'Kits Didáticos', '00', '389.00', '1034_1_H.png'),
 (5, 'Kit Iniciante para Robótica', 'Kits Didáticos', '00', '349.00', '854_1_H.png'),
 (6, 'Arduino Shield - Ethernet W5500', 'Shields para Arduino', '00', '119.00', '1004_1_H.png'),
@@ -225,6 +300,12 @@ INSERT INTO `produtos` (`codproduto`, `descricao`, `categoria`, `manual`, `valor
 --
 
 --
+-- Indexes for table `acesso_restrito`
+--
+ALTER TABLE `acesso_restrito`
+  ADD PRIMARY KEY (`pk_restrito`);
+
+--
 -- Indexes for table `administrador`
 --
 ALTER TABLE `administrador`
@@ -240,9 +321,7 @@ ALTER TABLE `cadastro`
 -- Indexes for table `cliente`
 --
 ALTER TABLE `cliente`
-  ADD PRIMARY KEY (`codcliente`),
-  ADD UNIQUE KEY `email` (`email`),
-  ADD UNIQUE KEY `cpf` (`cpf`);
+  ADD PRIMARY KEY (`codcliente`);
 
 --
 -- Indexes for table `itensproduto`
@@ -268,11 +347,36 @@ ALTER TABLE `perfilcliente`
   ADD KEY `codpedido` (`codpedido`);
 
 --
+-- Indexes for table `produto`
+--
+ALTER TABLE `produto`
+  ADD PRIMARY KEY (`codproduto`);
+
+--
 -- Indexes for table `produtos`
 --
 ALTER TABLE `produtos`
   ADD PRIMARY KEY (`codproduto`);
 
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `acesso_restrito`
+--
+ALTER TABLE `acesso_restrito`
+  MODIFY `pk_restrito` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+--
+-- AUTO_INCREMENT for table `cliente`
+--
+ALTER TABLE `cliente`
+  MODIFY `codcliente` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+--
+-- AUTO_INCREMENT for table `produto`
+--
+ALTER TABLE `produto`
+  MODIFY `codproduto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 --
 -- Constraints for dumped tables
 --
@@ -287,8 +391,7 @@ ALTER TABLE `itensproduto`
 -- Limitadores para a tabela `pedido`
 --
 ALTER TABLE `pedido`
-  ADD CONSTRAINT `pedido_ibfk_1` FOREIGN KEY (`codproduto`) REFERENCES `produtos` (`codproduto`),
-  ADD CONSTRAINT `pedido_ibfk_2` FOREIGN KEY (`codcliente`) REFERENCES `cliente` (`codcliente`);
+  ADD CONSTRAINT `pedido_ibfk_1` FOREIGN KEY (`codproduto`) REFERENCES `produtos` (`codproduto`);
 
 --
 -- Limitadores para a tabela `perfilcliente`
