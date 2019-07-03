@@ -4,7 +4,7 @@ header("Content-Type: text/plain");
 //Worskspace
 $workspace = "40c62a1a-1695-45ce-aeef-beaf1d6b9796";
 
-$apikey = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
+$apikey = "pAD3hRu2dkVgi5QV561MZ_ZeP0IRLQLlD0mO3eUspxRH";
 
 //Capturar Texto
 $texto = $_REQUEST["texto"];
