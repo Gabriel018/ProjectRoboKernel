@@ -11,6 +11,7 @@
    <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
    <link rel="stylesheet" href="./css/login.css">
    <link rel="stylesheet" href="./css/index.css">
+   <link rel="stylesheet" href="./css/Estilo.css">
 
 </head>
 <body>

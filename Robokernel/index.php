@@ -49,6 +49,14 @@ include 'header.php';
     <div class="col-sm-2">
       <div class="carrinho">
         <a href="carrinho.php"><i class="fas fa-shopping-cart"></i></a>
+        <div class="item-carrinho">
+        <?php 
+          session_start();
+          foreach($_SESSION['carrinho'] as $codproduto => $qtd) {
+            echo $qtd;
+          }
+        ?>
+        </div>
       </div>
     </div>
   </div>    
@@ -61,7 +69,7 @@ include 'header.php';
       <div class="col-lg-3 lateral" >
         <ul class="list-group">
         <a href="novidades.php"><li class="list-group-item">Novidades</li></a>
-        <a href="#"><li class="list-group-item">Placas Arduinos</li></a>
+        <a href="categoria1.php"><li class="list-group-item">Placas Arduinos</li></a>
         <a href="#"><li class="list-group-item">Shields para Arduino</li></a>
         <a href="#"><li class="list-group-item">Automação Resid.</li></a>
         <a href="#"><li class="list-group-item">Embarcados</li></a>
@@ -159,10 +167,10 @@ include 'header.php';
 
 
     <!--MAIS-VENDIDOS-->
-    <div class="container prod-maisvendido">
+    <div class="container prod-novidades">
       <div class="row">
-        <div class="col-sm-12">
-    <h3>Mais Vendidos </h3>
+        <div class="col-sm-12 coluna-nov">
+    <h3>Mais Vendidos</h3>
     <hr>
        <?php
          $i = 1;
@@ -170,7 +178,7 @@ include 'header.php';
             ($dados = mysqli_fetch_array($resultado)); 
 		?>
                 
-       <div class="col-md-2 container-fluid mais-vendidos">
+       <div class="col-md-2 container-fluid novidades">
           <div class="thumbnail">
              <a href="produtop.php?codproduto=<?= $dados['codproduto']; ?>">
              <img src="fotos/<?= $dados['imagem']; ?>" alt="" class="img-fluid"></a>
@@ -178,9 +186,9 @@ include 'header.php';
           <div class="descricao">
            <h5><?php echo $dados['descricao']; ?></h5>
            <p><?php echo $dados['categoria']; ?></p>
-			<p><?php echo "R$ ";
+			<h4><?php echo "R$ ";
 			echo $dados['preco']; ?>
-            </p>
+            </h4>
           </div>
       </div>
      <?php
@@ -191,6 +199,10 @@ include 'header.php';
         </div>
     </div>
 
+<div class="chatboot">
+<?php include "chatboot.php";?>
+</div>
+    
 <?php include "footer.php";?>
 
 
