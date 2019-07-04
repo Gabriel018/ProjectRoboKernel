@@ -3,9 +3,12 @@ h1, h4, h5, p{
 }
 
 
+
 body{
-background-image: url(./../Robokernel/img/);
-background-color: #555;
+background-image: url(./../Robokernel/img/fundo.jpg);
+background-color: #8c8c8c;
+background-image: linear-gradient(to right,#333 , #8c8c8c, #333);
+
 }
 
 .container{
@@ -85,15 +88,21 @@ background-color: #555;
     font-size: 30px;
     color: #fff;
     text-shadow: 1px 1px 1px black;
+    float: left;
 }
 
-.novidades{
-    height: 270px;
-    border-radius: 7px;
-    margin:0 15px;
-    border: 1px solid lightgray;
-    background-color: #fff;
+.item-carrinho{
+    width: 20px;
+    background-color: red;
+    color: #fff;
+    float: left;
+    position: relative;
+    top: 25px;
+    right: 18px;
+    text-align: center;
+    border-radius: 50px;
 }
+
 
 .thumbnail{
     border: none;
@@ -116,18 +125,24 @@ background-color: #555;
     font-weight: bold;
     background-color: gold;
     border-radius: 30px;
+    padding: 5px;
 
 }
 
-.prod-novidades{
+
+.prod-novidades, .prod-maisvendido{
     width: 100%;
     background-color: #fff;
 }
 
-.prod-maisvendido{
-    width: 100%;
+.novidades, .mais-vendidos{
+    height: 270px;
+    border-radius: 7px;
+    margin:0 15px;
+    border: 1px solid lightgray;
     background-color: #fff;
 }
+
 
 .mais-vendidos{
     height: 300px;
@@ -149,4 +164,15 @@ background-color: #555;
 .lateral li:hover{
     background-color: yellow;
     color: black;
+}
+
+.coluna-nov{
+    margin-bottom: 35px;
+}
+
+
+.chatboot{
+    position: absolute;
+    top: 780px;
+    left: -300px;
 }
