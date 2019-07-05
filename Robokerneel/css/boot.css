@@ -1,7 +1,7 @@
 .watson{
-    border: 1px solid #B0BEC5;
+    border: 1px solid rgb(78, 122, 144);
     border-radius: 3px;
-    height: 50em;
+    height: 90em;
     max-height: 500px;
     padding: 1em;
     
@@ -50,8 +50,8 @@
 }
 
 .watson .mensagens .texto.usuario{
-    background-color: #ECEFF1;
-    color: #1A237E;
+    background-color: rgb(211, 213, 214);
+    color: rgb(7, 8, 12);
     margin-right: 30%;
     
     transform-origin: 0% 100%;
@@ -62,8 +62,8 @@
 }
 
 .watson .mensagens .texto.chatbot{
-    background-color: #FF5722;
-    color: white;
+    background-color: grey;
+    color: black;
     font-weight: bold;
     margin-left: 30%;
     
@@ -80,7 +80,7 @@
 }
 
 .watson form.mensagem input{
-    border: 2px solid #476A7B;
+    border: 2px solid rgb(62, 77, 85);
     border-radius: 3px;
     padding: .5em .8em;
     font-size: 16px;
@@ -95,14 +95,14 @@
 }
 
 .watson form.mensagem button{
-    background-color: #3F51B5;
+    background-color: black;
     border: none;
     border-radius: 3px;
     display: block;
     padding: .5em 1em;
     width: 100%;
     font-size: 16px;
-    color: white;
+    color: yellow;
     margin-top: .5em;
 }
 
