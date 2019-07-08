@@ -52,11 +52,18 @@ include 'header.php';
         <div class="item-carrinho">
         <?php 
           session_start();
+          
           if ( isset($_SESSION['carrinho']) && count($_SESSION['carrinho']) > 0) {
+            $qtdNocarrinho = 0;
           foreach($_SESSION['carrinho'] as $codproduto => $qtd) {
-            echo $qtd;
+            
+            $qtdNocarrinho = $qtdNocarrinho + $qtd;
           }
+
+          echo $qtdNocarrinho;
         }
+
+
         ?>
         </div>
       </div>

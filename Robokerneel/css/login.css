@@ -1,13 +1,12 @@
-
 @charset "utf-8";
 /* CSS Document */
 
 .fundo-login{
 	width: 320px;
-	height: 420px;
-	background-color:lightgrey;
-	color: #fff;
-	top: 60%;
+	height: 360px;
+	background-color:#fff;
+	color: black;
+	top: 50%;
 	left: 50%;
 	position: absolute;
 	transform: translate(-50%, -50%);
@@ -35,9 +34,10 @@
 }
 
 .fundo-login p{
-	margin: 0;
-	padding: 0;
-	font-weight: bold;
+	margin-left: 13px;
+    margin-bottom: -13px;
+    padding: 0;
+    font-weight: bold;
 }
 
 .fundo-login input{
@@ -47,26 +47,38 @@
 
 .fundo-login input[type="email"], input[type="password"]{
 	border: none;
-	border-bottom: 1px solid #fff;
-	background: transparent;
-	outline: none;
-	height: 40px;
-	color: #fff;
-	font-size: 16px;
+    border-bottom: 1px solid black;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: black;
+    font-size: 16px;
+    width: 85%;
+    position: relative;
+    left: 24px;
 }
 
-.form-group .btn-success{
+.form-group .btn-success, .btn-danger{
 	border: none;
-	outline: none;
-	height: 40px;
-	color: #fff;
-	font-size: 18px;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    font-size: 18px;
+    width: 45%;
+    border-radius: 7px;
+    position: relative;
+    left: 15px;
 }
 
 .form-group .btn-danger{
 	border: none;
-	outline: none;
-	height: 40px;
-	color: #fff;
-	font-size: 18px;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    font-size: 18px;
+    width: 45%;
+    border-radius: 7px;
+    position: relative;
+    left: 15px;
+	
 }
