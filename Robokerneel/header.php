@@ -31,18 +31,7 @@
       <a class="navbar-brand" href="index.php" id="myNavbar">RoboKernel</a>
     </div>
 	
-  
-  
-
-	  <ul class="nav navbar-nav" id="myNavbar">
-     <li class="active" id="myNavbar"><a id="myNavbar" href="index.php">Home</a></li>
-      
-      </li>
-      <li><a href="comprar.php">Produtos da Loja</a></li>
-	  
-	
-	  
-	  
+ 
     </ul>
     <ul class="nav navbar-nav navbar-right">
 	
