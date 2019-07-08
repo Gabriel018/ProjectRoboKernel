@@ -1,0 +1,10 @@
+.novidades{
+    height: 320px;
+    border-radius: 7px;
+    margin: 0 15px;
+    border: 1px solid lightgray;
+    background-color: #fff;
+    width: 21%;
+    margin-bottom: 17px;
+}
+

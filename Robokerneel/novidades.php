@@ -7,24 +7,24 @@ $resultado = mysqli_query($conexao,$sql);
 include 'header.php';
 ?>
 
-<div class="container header">
+<div class="container header"> 
   <div class="row">
     <div class="col-lg-3 logo">
       <img src="./img/logo1.png" alt="">
     </div>
-
+    
     <div class="col-lg-3 loja-fisica">
       <p>LOJA FÍSICA <br>
       R. Santa Luzia, 735 - Sala 504 <br>
       Rio de Janeiro / RJ</p>
     </div>
-
+    
     <div class="col-lg-3 cetral-atendimento">
       <p>CENTRAL DE ATENDIMENTO <br>
         (21) 1234-5678 <br>
           info@robokernel.net</p>
     </div>
-
+    
     <div class="col-lg-3 horario-funcionamento">
       <p>HORÁRIO DE FUNCIONAMENTO <br>
       De segunda à sexta das 9:00 às 18:30</p>
@@ -32,23 +32,21 @@ include 'header.php';
   </div>
 </div><br>
 
-<hr>
-
 <div class="container barra-pesquisa" id="search">
   <div class="row">
     <div class="col-sm-3">
-      <h3 class="loja"><i>LOJAVIRTUAL</i> <a href="#" style="font-size: 17px">/Home</a></h3>
+    <h3 class="loja"><i>LOJAVIRTUAL</i> <a href="index.php" style="font-size: 17px; text-decoration:none; color:#fff;">/Home</a></h3>
     </div>
     <div class="col-sm-7">
       <input class="input-group" type="input" placeholder="Digite aqui o que você procura...">
     </div>
     <div class="col-sm-2">
-
+      
     </div>
-  </div>
+  </div>    
 </div>
 
-<hr>
+<br>
 
 <div class="container mt-1">
   <div class="row">
@@ -75,14 +73,14 @@ include 'header.php';
         </ul>
       </div>
 
-<section class="container" style="width:80%;">
-    <div class="row">
+    
+      <div class="col-sm-9">
        <?php
          $i = 1;
           do {
-            ($dados = mysqli_fetch_array($resultado));
+            ($dados = mysqli_fetch_array($resultado)); 
 		?>
-
+                
        <div class="col-md-2 container-fluid novidades">
           <div class="thumbnail">
              <a href="produtop.php?codproduto=<?= $dados['codproduto']; ?>">
@@ -91,17 +89,24 @@ include 'header.php';
           <div class="descricao">
            <h5><?php echo $dados['descricao']; ?></h5>
            <p><?php echo $dados['categoria']; ?></p>
-
-
-			<p><?php echo "R$ ";
+			<h4><?php echo "R$ ";
 			echo $dados['preco']; ?>
-            </p>
+            </h4>
           </div>
       </div>
      <?php
         $i++;
-         } while ($i<21);
+         } while ($i<13);
      ?>
+     
+        </div>
 
-    </div>
-</section>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-4">
+              <?php include "footer.php";?>
+            </div>
+          </div>
+        </div>
+
+    

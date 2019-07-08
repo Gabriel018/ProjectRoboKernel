@@ -3,9 +3,12 @@ h1, h4, h5, p{
 }
 
 
+
 body{
-background-image: url(./../Robokernel/img/);
-background-color: #555;
+background-image: url(./../Robokernel/img/fundo.jpg);
+background-color: #8c8c8c;
+background-image: linear-gradient(to right,#333 , #8c8c8c, #333);
+
 }
 
 .container{
@@ -85,9 +88,22 @@ background-color: #555;
     font-size: 30px;
     color: #fff;
     text-shadow: 1px 1px 1px black;
+    float: left;
 }
 
-.novidades{
+.item-carrinho{
+    width: 20px;
+    background-color: red;
+    color: #fff;
+    float: left;
+    position: relative;
+    top: 25px;
+    right: 18px;
+    text-align: center;
+    border-radius: 50px;
+}
+
+.novidades-index{
     height: 270px;
     border-radius: 7px;
     margin:0 15px;
@@ -116,6 +132,7 @@ background-color: #555;
     font-weight: bold;
     background-color: gold;
     border-radius: 30px;
+    padding: 5px;
 
 }
 
@@ -130,9 +147,11 @@ background-color: #555;
 }
 
 .mais-vendidos{
-    height: 300px;
-    border-radius: 10px;
-    margin:0 15px;
+    height: 270px;
+    border-radius: 7px;
+    margin: 0 15px;
+    border: 1px solid lightgray;
+    background-color: #fff;
 }
 
 .lateral a{

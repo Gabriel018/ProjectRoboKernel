@@ -63,7 +63,7 @@ include "header.php";
 
 			$consulta = mysqli_query($conexao, $sql);
 			// Se os dados forem inseridos com sucesso
-			if ($consulta){
+			if ($sql){
 					echo "
 				<script type=\"text/javascript\">
 					alert(\"Cadastrado com Sucesso.\");
@@ -81,7 +81,7 @@ include "header.php";
 	}
 ?>
 <body>
-<div class="container">
+<div class="container formulario-cliente">
   <h2>Cadastro de cliente</h2>
   
 <form class="form-horizontal" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="POST" enctype="multipart/form-data" name="cadastro" >

@@ -136,7 +136,7 @@ INSERT INTO `pedido` (`codpedido`, `qtd`, `preco`, `total`, `codcliente`, `codpr
 --
 
 CREATE TABLE `produto` (
-  `codproduto` int(11) ,
+  `codproduto` int(11) NOT NULL,
   `descricao` varchar(100) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
   `categoria` varchar(30) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
   `preco` float(10,2) NOT NULL,
@@ -255,7 +255,8 @@ ALTER TABLE `pedido`
 --
 -- Indexes for table `produto`
 --
-
+ALTER TABLE `produto`
+  ADD PRIMARY KEY (`codproduto`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -291,6 +292,7 @@ ALTER TABLE `pedido`
 ALTER TABLE `produto`
   MODIFY `codproduto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 COMMIT;
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

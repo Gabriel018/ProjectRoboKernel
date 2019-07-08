@@ -40,7 +40,7 @@ include 'header.php';
 <div class="container barra-pesquisa" id="search">
   <div class="row">
     <div class="col-sm-3">
-      <h3 class="loja"><i>LOJAVIRTUAL</i> <a href="#" style="font-size: 17px">/Home</a></h3>
+      <h3 class="loja"><i>LOJAVIRTUAL</i> <a href="index.php" style="font-size: 17px; text-decoration:none; color:#fff;">/Home</a></h3>
     </div>
     <div class="col-sm-7">
       <input class="input-group" type="input" placeholder="Digite aqui o que você procura...">
@@ -52,11 +52,11 @@ include 'header.php';
         <div class="item-carrinho">
         <?php 
           session_start();
-          if ($_SESSION['carrinho'] && count($_SESSION['carrinho']) > 0) {
-            foreach($_SESSION['carrinho'] as $codproduto => $qtd) {
-              echo $qtd;
-            }
+          if ( isset($_SESSION['carrinho']) && count($_SESSION['carrinho']) > 0) {
+          foreach($_SESSION['carrinho'] as $codproduto => $qtd) {
+            echo $qtd;
           }
+        }
         ?>
         </div>
       </div>
@@ -71,9 +71,9 @@ include 'header.php';
       <div class="col-lg-3 lateral" >
         <ul class="list-group">
         <a href="novidades.php"><li class="list-group-item">Novidades</li></a>
-        <a href="categoria1.php"><li class="list-group-item">Placas Arduinos</li></a>
-        <a href="#"><li class="list-group-item">Shields para Arduino</li></a>
-        <a href="#"><li class="list-group-item">Automação Resid.</li></a>
+        <a href="placas-arduinos.php"><li class="list-group-item">Placas Arduinos</li></a>
+        <a href="shield-para-arduinos.php"><li class="list-group-item">Shields para Arduino</li></a>
+        <a href="automacao-residencial.php"><li class="list-group-item">Automação Resid.</li></a>
         <a href="#"><li class="list-group-item">Embarcados</li></a>
         <a href="#"><li class="list-group-item">Internet das coisas</li></a>
         <a href="#"><li class="list-group-item">Cabos e Conectores</li></a>
@@ -109,11 +109,11 @@ include 'header.php';
     </div>
 
     <div class="item">
-      <img src="./img/robotica.jpg" alt="...">
+      <img src="./img/kitrobotica.png" alt="...">
     </div>
 
     <div class="item">
-      <img src="./img/robotica.jpg" alt="...">
+      <img src="./img/kitarduino.png" alt="...">
     </div>
   </div>
   
@@ -138,7 +138,7 @@ include 'header.php';
     <div class="container prod-novidades">
       <div class="row">
         <div class="col-sm-12">
-    <h3>Novidades</h3>
+    <h3 style="margin-left: 15px;">Novidades</h3>
     <hr>
        <?php
          $i = 1;
@@ -146,7 +146,7 @@ include 'header.php';
             ($dados = mysqli_fetch_array($resultado)); 
 		?>
                 
-       <div class="col-md-2 container-fluid novidades">
+       <div class="col-md-2 container-fluid novidades-index">
           <div class="thumbnail">
              <a href="produtop.php?codproduto=<?= $dados['codproduto']; ?>">
              <img src="fotos/<?= $dados['imagem']; ?>" alt="" class="img-fluid"></a>
@@ -169,10 +169,10 @@ include 'header.php';
 
 
     <!--MAIS-VENDIDOS-->
-    <div class="container prod-novidades">
+    <div class="container prod-maisvendido">
       <div class="row">
-        <div class="col-sm-12 coluna-nov">
-    <h3>Mais Vendidos</h3>
+        <div class="col-sm-12" style="margin-bottom: 30px;">
+    <h3 style="margin-left: 15px;">Mais Vendidos </h3>
     <hr>
        <?php
          $i = 1;
@@ -180,7 +180,7 @@ include 'header.php';
             ($dados = mysqli_fetch_array($resultado)); 
 		?>
                 
-       <div class="col-md-2 container-fluid novidades">
+       <div class="col-md-2 container-fluid mais-vendidos">
           <div class="thumbnail">
              <a href="produtop.php?codproduto=<?= $dados['codproduto']; ?>">
              <img src="fotos/<?= $dados['imagem']; ?>" alt="" class="img-fluid"></a>
@@ -197,14 +197,12 @@ include 'header.php';
         $i++;
          } while ($i<6);
      ?>
+     
       </div>
         </div>
     </div>
 
-<div class="chatboot">
-<?php include "chatboot.php";?>
-</div>
-    
+
 <?php include "footer.php";?>
 
 

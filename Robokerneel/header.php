@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <title>Loja de Robotica</title>
+  <title>Robokernel</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
@@ -11,6 +11,9 @@
    <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
    <link rel="stylesheet" href="./css/login.css">
    <link rel="stylesheet" href="./css/index.css">
+   <link rel="stylesheet" href="./css/cliente.css">
+   <link rel="stylesheet" href="./css/novidades.css">
+   <link rel="icon" href="./img/icon1.png">
 
 </head>
 <body>

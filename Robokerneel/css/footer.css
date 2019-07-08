@@ -1,5 +1,6 @@
 .rodape{
     width: 100%;
+    padding: 21px;
     
 }
 
@@ -99,6 +100,11 @@
 
 .footer.twitter:hover {
      color: #BEBEBE;
+}
+
+
+.redes-sociais{
+    font-size: 30px;
 }
 
 @media screen and (max-width: 1200px) {

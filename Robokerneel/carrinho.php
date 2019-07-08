@@ -12,7 +12,7 @@
             if(!isset($_SESSION['carrinho'][$codproduto])){ 
                 $_SESSION['carrinho'][$codproduto] = 1; 
             } else { 
-                $_SESSION['carrinho'][$codproduto] = 1; 
+                $_SESSION['carrinho'][$codproduto] += 1; 
             } 
 		}
 		
@@ -121,7 +121,7 @@
 				
 								<td>'.$descricao.'</td>
                                 
-								<td><input type="number" size="3" name="prod['.$codproduto.']" value="'.$qtd.'" ></td>
+								<td><input type="text" size="3" name="prod['.$codproduto.']" value="'.$qtd.'" ></td>
                                 
 								<td>R$ '.$preco.'</td>
                                 
