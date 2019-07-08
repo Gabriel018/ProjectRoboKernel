@@ -23,7 +23,7 @@
                 </div>
                 <div class="col-sm-3">
                     <h5>Formas de Pagamento</h5>
-					<img src="./robokernel/img/tipopgto.png" alt="">
+					<img src="./img/tipopgto.png" alt="">
                 </div>
 
 				<div class="col-sm-3 redes-sociais">
