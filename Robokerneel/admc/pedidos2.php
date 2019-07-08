@@ -14,7 +14,7 @@
 		<div class="content-box-large">
 		 <div class="panel-heading">
 		<div class="panel-title">
-		<h1>Listagem de Produtos</h1>
+		<h1>Historico de produtos</h1>
 		<?php echo $_SESSION['clientenome']; ?>, seus  pedidos:
 	</div>
 	<div class="panel-options">

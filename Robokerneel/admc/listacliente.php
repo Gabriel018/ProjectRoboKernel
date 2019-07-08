@@ -82,11 +82,12 @@ $total     = mysqli_num_rows($resultado);
 <?php echo '</td>';?>
 
 
-<?php echo '<td>';?> <?php echo "<img src=../fotoscliente/".$dados['imagem']." width='40' height='40'";?>
+<?php echo '<td>';?> <?php echo "<img src=../fotoscliente/".$dados['imagem']." width='40' height='40'";?><tr/>
 <?php echo '</td>';?>
 </tbody>
 <tr>
 <td>
+<a href="alterarcliente.php?cliente=<? = $dados['codcliente']; ?>" class="btn btn-danger">Alterar</a></td>
 <td>
 
 
