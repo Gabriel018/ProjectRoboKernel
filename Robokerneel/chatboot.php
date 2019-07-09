@@ -10,15 +10,29 @@
 </head>
 <body>
 <div id="watson" class="watson">
+<a class="btn-close">x</a>
 	<div class="mensagens">
 		<div class="area" id="chat">
 		</div>
 	</div>
 	<form id="mensagem" class="mensagem">
-		<input type="text" id="texto" name="texto" placeholder="Digite sua mensagem"/>
-		<button type="submit">Enviar</button>
+		<div class="input-group">
+			<input type="text" id="texto" name="texto" placeholder="Digite sua mensagem"/>
+			<span>
+				<button type="submit">
+					<i class="fa fa-paper-plane" aria-hidden="true"></i>
+				</button>
+			</span>
+		</div>
+		
 	</form>
 </div>
+
+<script>
+      $(".btn-close").click(function(){
+          $(".watson").hide();
+      });
+    </script>
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script type="text/javascript">
 //Submeter Formulário

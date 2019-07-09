@@ -1,17 +1,24 @@
 .watson{
+  background-color: #555;
     border: 1px solid rgb(78, 122, 144);
     border-radius: 3px;
     height: 90em;
     max-height: 500px;
     padding: 1em;
-    
     max-width: 500px;
     margin: 0 auto;
-    
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-}
+    position: fixed;
+    width: 100%;
+    top: 100px;
+    left: 47px;
+    border-radius: 7px;
+    
+
+  
+  }
 
 .watson .mensagens{
     box-sizing: border-box;
@@ -25,6 +32,7 @@
     justify-content: flex-end;
     flex-direction: column;
     min-height: 100%;
+    background-color: #fff;
 }
 
 .watson .mensagens .texto{
@@ -59,6 +67,12 @@
     -moz-transform-origin: 0% 100%;
     -o-transform-origin: 0% 100%;
     -ms-transform-origin: 0% 100%;
+
+    background-color:rgb(190, 189, 189);
+    border-radius: 7px;
+    box-shadow: 0px 0px 5px grey;
+    margin-left: 10px;
+    width: 50%;
 }
 
 .watson .mensagens .texto.chatbot{
@@ -72,6 +86,11 @@
     -moz-transform-origin: 100% 100%;
     -o-transform-origin: 100% 100%;
     -ms-transform-origin: 100% 100%;
+    background-color: gold;
+    border-radius: 7px;
+    margin-right: 10px;
+    box-shadow: 0px 0px 5px grey;
+
 }
 
 .watson form.mensagem{
@@ -95,23 +114,54 @@
 }
 
 .watson form.mensagem button{
-    background-color: black;
-    border: none;
-    border-radius: 3px;
+  font-size: 26px;
+    position: relative;
+    float: right;
+    top: -36px;
+    right: 19px;
     display: block;
-    padding: .5em 1em;
-    width: 100%;
-    font-size: 16px;
-    color: yellow;
-    margin-top: .5em;
+    background-color: transparent;
+    border: none;
 }
+
+
+.input-group {
+  width: 100%;
+  float: left;
+  height: 35px;
+  outline: none;
+  padding: 0;
+  border-radius: 25px 0 0 25px;
+  margin: 0;
+}
+.fa-paper-plane{
+  font-size: 26px;
+    color:gold;
+    position: relative;
+    float: right;
+    right: 2px;
+    display: block;
+}
+
+.btn-close{
+  font-size: 27px;
+    color: gold;
+    float: right;
+    cursor: pointer;
+  width: 25px;
+    position: relative;
+    top: -13px;
+    left: 457px;
+}
+
+
 
 
 /**Animação de Mensagem**/
 
 @keyframes popupmensagem{
   0% {
-    transform:  scaleX(0.30) scaleY(0.30) ;
+    transform: scaleX(0.30) scaleY(0.30) ;
   }
   100% {
     transform:  scaleX(1.00) scaleY(1.00) ;

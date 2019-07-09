@@ -43,7 +43,7 @@ include 'header.php';
       <h3 class="loja"><i>LOJAVIRTUAL</i> <a href="index.php" style="font-size: 17px; text-decoration:none; color:#fff;">/Home</a></h3>
     </div>
     <div class="col-sm-7">
-      <input class="input-group" type="input" placeholder="Digite aqui o que você procura...">
+      <input class="input-group1" type="input" placeholder="Digite aqui o que você procura..." style="width:80%;">
       <button class="pesquisar"><i class="fab fa-searchengin"></i></button>
     </div>
     <div class="col-sm-2">
@@ -209,6 +209,17 @@ include 'header.php';
         </div>
     </div>
 
+<!----------btn chatbot----------->
+
+         <button class="btn-chatbot">
+           <i class="fas fa-bolt"></i>
+         </button>
+
+    <script>
+      $(".btn-chatbot").click(function(){
+          $(".watson").show();
+      });
+    </script>
 
 <?php include "footer.php";
 

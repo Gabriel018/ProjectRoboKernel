@@ -33,14 +33,13 @@ background-image: linear-gradient(to right,#333 , #8c8c8c, #333);
 }
 
 
-.input-group{
-    width: 80%;
+.input-group1{
     float: left;
     height: 35px;
     outline: none;
-    padding: 0 25px;
+    padding: 0;
     border-radius: 25px 0 0 25px;
-    margin: 10px 0;
+    margin: 10px 0; 
 
 }
 
@@ -168,4 +167,19 @@ background-image: linear-gradient(to right,#333 , #8c8c8c, #333);
 .lateral li:hover{
     background-color: yellow;
     color: black;
+}
+
+
+/*-----btn chatbot----*/
+
+.btn-chatbot{
+    position: absolute;
+    right: 963px;
+    top: 820px;
+    height: 100px;
+    width: 100px;
+    border-radius: 60px;
+    border: none;
+    background-color:gold;
+    
 }
