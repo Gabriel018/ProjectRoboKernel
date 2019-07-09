@@ -17,7 +17,7 @@
 
 </head>
 <body>
-<div class="container">
+<div class="container-fluid">
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">

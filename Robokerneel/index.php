@@ -11,26 +11,26 @@ include 'header.php';
 
 <!--------------------------HEADER-------------------------------->
 
-
+<div >
 <div class="container header"> 
   <div class="row">
-    <div class="col-lg-3 logo">
-      <img src="./img/logo1.png" alt="">
+    <div class="col-lg-3 col-md-3 col-sm-3 logo">
+      <img src="./img/logo1.png" class="img-responsive" alt="">
     </div>
     
-    <div class="col-lg-3 loja-fisica">
+    <div class="col-lg-3 col-md-3 col-sm-3 loja-fisica">
       <p>LOJA FÍSICA <br>
       R. Santa Luzia, 735 - Sala 504 <br>
       Rio de Janeiro / RJ</p>
     </div>
     
-    <div class="col-lg-3 cetral-atendimento">
+    <div class="col-lg-3 col-md-3 col-sm-3 cetral-atendimento">
       <p>CENTRAL DE ATENDIMENTO <br>
         (21) 1234-5678 <br>
           info@robokernel.net</p>
     </div>
     
-    <div class="col-lg-3 horario-funcionamento">
+    <div class="col-lg-3 col-md-3 col-sm-3 horario-funcionamento">
       <p>HORÁRIO DE FUNCIONAMENTO <br>
       De segunda à sexta das 9:00 às 18:30</p>
     </div>
@@ -221,9 +221,16 @@ include 'header.php';
       });
     </script>
 
-<?php include "footer.php";
 
-      include "chatboot.php";
-?>
+<div class="container footer-index" style="margin-left:-266px;">
+          <div class="row">
+            <div class="col-lg-4">
+              <?php include "footer.php";?>
+            </div>
+          </div>
+        </div>
 
+<?php include "chatboot.php";?>
+
+</div>
 

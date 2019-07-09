@@ -169,6 +169,10 @@ background-image: linear-gradient(to right,#333 , #8c8c8c, #333);
     color: black;
 }
 
+.footer-index{
+    height: 277px;
+}
+
 
 /*-----btn chatbot----*/
 
@@ -182,4 +186,21 @@ background-image: linear-gradient(to right,#333 , #8c8c8c, #333);
     border: none;
     background-color:gold;
     
+}
+
+
+
+
+
+
+
+
+
+
+/*Media Queries*/
+
+@media screen and (min-width: 320px) and (max-width:480px){
+    .header{
+        display: none;
+    }
 }
