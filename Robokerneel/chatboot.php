@@ -11,6 +11,8 @@
 <body>
 <div id="watson" class="watson">
 <a class="btn-close">x</a>
+<img src="./img/chat.png" class="avatar" alt="">
+<h3>Atendente</h3>
 	<div class="mensagens">
 		<div class="area" id="chat">
 		</div>
