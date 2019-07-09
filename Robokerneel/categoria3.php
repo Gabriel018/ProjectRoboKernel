@@ -7,7 +7,7 @@ include "conexao.php";
 	<div class="row">
 		<!--Imagens diretas do banco-->       
 <?php
-		$sql = "select * from produto where categoria='manutencao'";
+		$sql = "select * from produto where categoria='Placas Arduino'";
         $resultado = mysqli_query($conexao, $sql);      
       while ( $dados = mysqli_fetch_assoc($resultado) ) 
 	   {  

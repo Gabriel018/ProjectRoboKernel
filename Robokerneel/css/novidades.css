@@ -8,3 +8,19 @@
     margin-bottom: 17px;
 }
 
+
+.lateral a{
+    color: black;
+    text-decoration: none;
+}
+
+.lateral li{
+    font-family: Muli;
+    background-color:rgba(0, 0, 0, 0.3);
+    color: #fff;
+}
+
+.lateral li:hover{
+    background-color: yellow;
+    color: black;
+}

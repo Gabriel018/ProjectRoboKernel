@@ -1,6 +1,6 @@
 <?php
 include('conexao.php');
-$sql = "select * from produto";
+$sql = "SELECT * FROM produto WHERE categoria='Placas Arduino' ";
 $sql2 = "SELECT * FROM produto";
 $resultado2 = mysqli_query($conexao,$sql2);
 $resultado = mysqli_query($conexao,$sql);
@@ -32,51 +32,69 @@ include 'header.php';
   </div>
 </div><br>
 
-<hr>
-
 <div class="container barra-pesquisa" id="search">
   <div class="row">
     <div class="col-sm-3">
-      <h3 class="loja"><i>LOJAVIRTUAL</i> <a href="#" style="font-size: 17px">/Home</a></h3>
+      <h3 class="loja"><i>LOJAVIRTUAL</i> <a href="index.php" style="font-size: 17px; text-decoration:none; color:#fff;">/Home</a></h3>
     </div>
     <div class="col-sm-7">
-      <input class="input-group" type="input" placeholder="Digite aqui o que você procura...">
+      <input class="input-group1" type="input" placeholder="Digite aqui o que você procura..." style="width:80%;">
+      <button class="pesquisar"><i class="fab fa-searchengin"></i></button>
     </div>
     <div class="col-sm-2">
-      
+      <div class="carrinho">
+        <a href="carrinho.php"><i class="fas fa-shopping-cart"></i></a>
+        <div class="item-carrinho">
+        <?php 
+          session_start();
+          
+          if ( isset($_SESSION['carrinho']) && count($_SESSION['carrinho']) > 0) {
+            $qtdNocarrinho = 0;
+          foreach($_SESSION['carrinho'] as $codproduto => $qtd) {
+            
+            $qtdNocarrinho = $qtdNocarrinho + $qtd;
+          }
+
+          echo $qtdNocarrinho;
+        }
+
+
+        ?>
+        </div>
+      </div>
     </div>
   </div>    
-</div>
+</div><br>
 
-<hr>
+<br>
 
-<div class="container mt-1">
+<div class="container menu-lateral">
   <div class="row">
-      <div class="col-sm-3" >
+      <div class="col-lg-3 lateral" >
         <ul class="list-group">
-        <li class="list-group-item"><a href="novidades.php">Novidades</a></li>
-          <li class="list-group-item">Placas Arduinos</li>
-          <li class="list-group-item">Shields para Arduino</li>
-          <li class="list-group-item">Automação Resid.</li>
-          <li class="list-group-item">Embarcados</li>
-          <li class="list-group-item">Internet das coisas</li>
-          <li class="list-group-item">Cabos e Conectores</li>
-          <li class="list-group-item">Displays e LCDs</li>
-          <li class="list-group-item">Drivers de Motores</li>
-          <li class="list-group-item">Fontes e Baterias</li>
-          <li class="list-group-item">Itens Eletrônicos</li>
-          <li class="list-group-item">Itens Mecanico</li>
-          <li class="list-group-item">Motores</li>
-          <li class="list-group-item">Protoboards</li>
-          <li class="list-group-item">Rodas</li>
-          <li class="list-group-item">Sensores</li>
-          <li class="list-group-item">Servos & R/C</li>
-          <li class="list-group-item">Wireless</li>
+        <a href="novidades.php"><li class="list-group-item">Novidades</li></a>
+        <a href="placas-arduinos.php"><li class="list-group-item">Placas Arduinos</li></a>
+        <a href="shield-para-arduinos.php"><li class="list-group-item">Shields para Arduino</li></a>
+        <a href="automacao-residencial.php"><li class="list-group-item">Automação Resid.</li></a>
+        <a href="#"><li class="list-group-item">Embarcados</li></a>
+        <a href="#"><li class="list-group-item">Internet das coisas</li></a>
+        <a href="#"><li class="list-group-item">Cabos e Conectores</li></a>
+        <a href="#"><li class="list-group-item">Displays e LCDs</li></a>
+        <a href="#"><li class="list-group-item">Drivers de Motores</li></a>
+        <a href="#"><li class="list-group-item">Fontes e Baterias</li></a>
+        <a href="#"><li class="list-group-item">Itens Eletrônicos</li></a>
+        <a href="#"><li class="list-group-item">Itens Mecanico</li></a>
+        <a href="#"><li class="list-group-item">Motores</li></a>
+        <a href="#"><li class="list-group-item">Protoboards</li></a>
+        <a href="#"><li class="list-group-item">Rodas</li></a>
+        <a href="#"><li class="list-group-item">Sensores</li></a>
+        <a href="#"><li class="list-group-item">Servos & R/C</li></a>
+        <a href="#"><li class="list-group-item">Wireless</li></a>
         </ul>
       </div>
 
-<section class="container" style="width:80%;">
-    <div class="row">
+    
+      <div class="col-sm-9">
        <?php
          $i = 1;
           do {
@@ -91,15 +109,24 @@ include 'header.php';
           <div class="descricao">
            <h5><?php echo $dados['descricao']; ?></h5>
            <p><?php echo $dados['categoria']; ?></p>
-			<p><?php echo "R$ ";
+			<h4><?php echo "R$ ";
 			echo $dados['preco']; ?>
-            </p>
+            </h4>
           </div>
       </div>
      <?php
         $i++;
-         } while ($i<20);
+         } while ($i<13);
      ?>
+     
+        </div>
 
-    </div>
-</section>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-4">
+              <?php include "footer.php";?>
+            </div>
+          </div>
+        </div>
+
+    

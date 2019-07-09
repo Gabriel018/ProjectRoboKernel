@@ -136,72 +136,13 @@ INSERT INTO `pedido` (`codpedido`, `qtd`, `preco`, `total`, `codcliente`, `codpr
 --
 
 CREATE TABLE `produto` (
-  `codproduto` int(11) NOT NULL, 
+  `codproduto` int(11) NOT NULL,
   `descricao` varchar(100) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
   `categoria` varchar(30) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
   `preco` float(10,2) NOT NULL,
   `imagem` varchar(100) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-ALTER TABLE `acesso_restrito`
-  ADD PRIMARY KEY (`pk_restrito`);
 
---
--- Indexes for table `cliente`
---
-ALTER TABLE `cliente`
-  ADD PRIMARY KEY (`codcliente`);
-
---
--- Indexes for table `funcionario`
---
-ALTER TABLE `funcionario`
-  ADD PRIMARY KEY (`codfuncionario`);
-
---
--- Indexes for table `pedido`
---
-ALTER TABLE `pedido`
-  ADD PRIMARY KEY (`codpedido`);
-
---
--- Indexes for table `produto`
---
-ALTER TABLE `produto`
-  ADD PRIMARY KEY (`codproduto`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `acesso_restrito`
---
-ALTER TABLE `acesso_restrito`
-  MODIFY `pk_restrito` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
-
---
--- AUTO_INCREMENT for table `cliente`
---
-ALTER TABLE `cliente`
-  MODIFY `codcliente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
-
---
--- AUTO_INCREMENT for table `funcionario`
---
-ALTER TABLE `funcionario`
-  MODIFY `codfuncionario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
-
---
--- AUTO_INCREMENT for table `pedido`
---
-ALTER TABLE `pedido`
-  MODIFY `codpedido` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
-
---
--- AUTO_INCREMENT for table `produto`
---
-ALTER TABLE `produto`
-  MODIFY `codproduto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
 --
 -- Extraindo dados da tabela `produto`
 --
@@ -290,7 +231,66 @@ INSERT INTO produto (codproduto,descricao,categoria,preco,imagem) VALUES
 --
 -- Indexes for table `acesso_restrito`
 --
+ALTER TABLE `acesso_restrito`
+  ADD PRIMARY KEY (`pk_restrito`);
 
+--
+-- Indexes for table `cliente`
+--
+ALTER TABLE `cliente`
+  ADD PRIMARY KEY (`codcliente`);
+
+--
+-- Indexes for table `funcionario`
+--
+ALTER TABLE `funcionario`
+  ADD PRIMARY KEY (`codfuncionario`);
+
+--
+-- Indexes for table `pedido`
+--
+ALTER TABLE `pedido`
+  ADD PRIMARY KEY (`codpedido`);
+
+--
+-- Indexes for table `produto`
+--
+ALTER TABLE `produto`
+  ADD PRIMARY KEY (`codproduto`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `acesso_restrito`
+--
+ALTER TABLE `acesso_restrito`
+  MODIFY `pk_restrito` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `cliente`
+--
+ALTER TABLE `cliente`
+  MODIFY `codcliente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- AUTO_INCREMENT for table `funcionario`
+--
+ALTER TABLE `funcionario`
+  MODIFY `codfuncionario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `pedido`
+--
+ALTER TABLE `pedido`
+  MODIFY `codpedido` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `produto`
+--
+ALTER TABLE `produto`
+  MODIFY `codproduto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
