@@ -135,7 +135,7 @@ include 'header.php';
 
 <script>
   $('.carousel').carousel({
-  interval: 2000
+  interval: 3000
 })
 </script>
     <br><br>  

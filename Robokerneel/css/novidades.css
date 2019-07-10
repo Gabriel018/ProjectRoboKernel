@@ -8,6 +8,18 @@
     margin-bottom: 17px;
 }
 
+@media only screen and (max-width: 350px) {
+    .novidades {
+        width: 100%;
+        height: 100%;
+    }
+}
+@media only screen and (max-width: 990px) {
+    .novidades {
+        width: 75%;
+        height: 100%;
+    }
+}
 
 .lateral a{
     color: black;
