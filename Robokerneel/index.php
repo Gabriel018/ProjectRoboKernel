@@ -11,8 +11,7 @@ include 'header.php';
 
 <!--------------------------HEADER-------------------------------->
 
-<div >
-<div class="container header"> 
+<div class="container header w-100"> 
   <div class="row">
     <div class="col-lg-3 col-md-3 col-sm-3 logo">
       <img src="./img/logo1.png" class="img-responsive" alt="">
@@ -205,32 +204,16 @@ include 'header.php';
          } while ($i<6);
      ?>
      
-      </div>
         </div>
+      </div>
     </div>
 
 <!----------btn chatbot----------->
 
-         <button class="btn-chatbot">
-           <i class="fas fa-bolt"></i>
-         </button>
 
-    <script>
-      $(".btn-chatbot").click(function(){
-          $(".watson").show();
-      });
-    </script>
-
-
-<div class="container footer-index" style="margin-left:-266px;">
-          <div class="row">
-            <div class="col-lg-4">
-              <?php include "footer.php";?>
-            </div>
-          </div>
-        </div>
 
 <?php include "chatboot.php";?>
+<?php include "footer.php";?>
 
 </div>
 

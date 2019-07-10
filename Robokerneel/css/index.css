@@ -169,14 +169,9 @@ background-image: linear-gradient(to right,#333 , #8c8c8c, #333);
     color: black;
 }
 
-.footer-index{
-    height: 277px;
-}
-
-
 /*-----btn chatbot----*/
 
-.btn-chatbot{
+/* .btn-chatbot{
     position: absolute;
     right: 963px;
     top: 820px;
@@ -184,8 +179,18 @@ background-image: linear-gradient(to right,#333 , #8c8c8c, #333);
     width: 100px;
     border-radius: 60px;
     border: none;
-    background-color:gold;
-    
+    background-color:gold;   
+} */
+
+.btn-chatbot{
+    position: fixed;
+    left: 35px;
+    Bottom: 35px;
+    height: 100px;
+    width: 100px;
+    border-radius: 60px;
+    border: none;
+    background-color:gold;   
 }
 
 

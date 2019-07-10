@@ -118,15 +118,9 @@ include 'header.php';
         $i++;
          } while ($i<13);
      ?>
-     
-        </div>
+</div>
 
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-4">
-              <?php include "footer.php";?>
-            </div>
-          </div>
-        </div>
+<?php include "footer.php";?>
+
 
     

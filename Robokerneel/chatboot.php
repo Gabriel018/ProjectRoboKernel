@@ -9,6 +9,18 @@
     <title>Chatboot</title>
 </head>
 <body>
+	
+<button class="btn-chatbot">
+  <i class="fas fa-bolt"></i>
+</button>
+
+<script>
+  $(".btn-chatbot").click(function(){
+      $(".watson").toggle();
+  });
+</script>
+
+
 <div id="watson" class="watson">
 <a class="btn-close">x</a>
 <img src="./img/chat.png" class="avatar" alt="">

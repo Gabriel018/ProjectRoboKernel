@@ -1,20 +1,11 @@
-.rodape{
-    width: 100%;
-    padding: 21px;
-    
-}
-
-
 .footer{
     background-color: #000;
     color: #BEBEBE;
 	width:100%;
 	bottom:0;
-	position:relativo;
 	clear:both;
     margin-top:2em;
     margin-left: 0;
-    width: 1168px;
 	
 }
 
@@ -75,7 +66,7 @@
 
 .footer .second-bar a {
     font-size: 22px;
-     color: #BEBEBE;
+    color: #BEBEBE;
     padding: 10px;
     transition: 0.2s;
     line-height: 68px;
